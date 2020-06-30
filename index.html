@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuBotica</title>
+    <link rel="icon" href="tubotica-icon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="tubotica-icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <div class="container">
+        <!----------------------------Header---------------------------->
+        <div class="header">
+            <head>
+                <div class="logo">
+                    <img src="isotipo.png" alt="logo" width="35px" height="35px">
+                    <span>TuBotica.pe</span>
+                </div>
+                <div class="searchbar-container">
+                    <div class="searchbar">
+                        <input type="text" placeholder="¿Qué estás buscando?">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="icons">
+                    <button class="iconButton whatsapp ripple"><i class="fab fa-whatsapp"></i></button>
+                    <button class="iconButton ripple"><i class="fas fa-shopping-basket" data-count="0"></i></button>
+                    <button class="iconButton ripple"><i class="fas fa-user"></i></button>
+                </div>
+            </head>
+        </div>
+        <!----------------------------Content---------------------------->
+
+        <div class="content">
+            <!-------------------------Slider------------------------------------->
+            <div class="slider-container">
+                <label class="dots" ></label>
+                <label class="dots" ></label>
+                <label class="dots" ></label>
+                <label class="dots" ></label>   
+                <div id="slider" class="slider">
+                    <ul>
+                        <li>
+                            <img src="Producto1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="Producto1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="Producto1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="Producto1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="Producto1.png" alt="">
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+
+            <div class="categories">
+                <div class="arrow left">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <div id="sc" class="scrolling-categories">
+                    <div class="card">
+                        <img class="img1" src="Adulto Mayor.png" alt="">
+                        <img class="img2" src="Adulto Mayor2.png" alt="">
+                        <h2><span>A</span>dulto Mayor</h2>
+                    </div>
+                    <div class="card">
+                        <img class="img1" src="Bebés.png" alt="">
+                        <img class="img2" src="Bebés2.png" alt="">
+                        <h2><span>B</span>ebés</h2>
+                    </div>
+                    <div class="card">
+                        <img class="img1" src="Belleza.png" alt="">
+                        <img class="img2" src="Belleza2.png" alt="">
+                        <h2><span>B</span>elleza</h2>
+                    </div>
+                    <div class="card">
+                        <img class="img1" src="Cuidado personal.png" alt="">
+                        <img class="img2" src="Cuidado personal2.png" alt="">
+                        <h2><span>C</span>uidado Personal</h2>
+                    </div>
+                    <div class="card">
+                        <img class="img1" src="Descuentos.png" alt="">
+                        <img class="img2" src="Descuentos2.png" alt="">
+                        <h2><span>P</span>romociones</h2>
+                    </div>
+                    <div id="last" class="card">
+                        <img class="img1" src="MEDICINA.png" alt="">
+                        <img class="img2" src="MEDICINA2.png" alt="">
+                        <h2><span>M</span>edicina y Salud</h2>
+                    </div>
+                    <div class="ext">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="arrow right">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector(".scrolling-categories");
+
+        const lefty = document.querySelector(".left");
+        const translate = 180;
+        let leftSpace = 0;
+
+        lefty.addEventListener("click", function() {
+            container.scrollLeft+=1;
+            container.scrollLeft-=1;
+            container.scrollLeft-=translate;
+        });
+
+        const righty = document.querySelector(".right");
+        righty.addEventListener("click", function() {
+            container.scrollLeft-=1;
+            container.scrollLeft+=1;
+            container.scrollLeft+=translate;
+        });
+
+        container.addEventListener("scroll",function(event){
+            const maxScrollLeft = container.scrollWidth - container.clientWidth;
+            console.log({scrollLeft:container.scrollLeft});
+            if(container.scrollLeft>1){
+                lefty.style.visibility="visible";
+                if(container.scrollLeft>maxScrollLeft-10){
+                    righty.style.visibility="hidden"; 
+                }else{
+                    righty.style.visibility="visible"; 
+                }
+            }else{
+                lefty.style.visibility="hidden";
+            }
+            
+        },false);
+
+        
+    </script>
+
+</body>
+</html>
