@@ -408,7 +408,7 @@ body{
     font-size: small;
 }
 .card h2 span{
-    color:rgb(92, 243, 54);
+    color:#00E64E;
 }
 
 @media  (max-aspect-ratio: 4/3) {
