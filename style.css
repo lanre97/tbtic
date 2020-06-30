@@ -36,6 +36,7 @@ body{
 }
 .header .logo img{
     margin-right: 5px;
+    pointer-events: none;
 }
 .header .searchbar-container{
     display: flex;
@@ -180,6 +181,7 @@ body{
 }
 
 .slider img{
+    pointer-events: none;
     height  : 100%;
 }
 
@@ -338,6 +340,7 @@ body{
 }
 
 .card {
+    pointer-events: none;
     display: flex;
     justify-content: center;
     flex-direction: column;
