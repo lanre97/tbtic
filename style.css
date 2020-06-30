@@ -340,7 +340,6 @@ body{
 }
 
 .card {
-    pointer-events: none;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -386,12 +385,15 @@ body{
 }
 
 .card .img1{
+    pointer-events: none;   
     height: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
+
 .card .img2{
+    pointer-events: none;
     display: none;
     height: 30px;
     margin-left: auto;
