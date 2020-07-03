@@ -310,30 +310,54 @@
 
         container.addEventListener("scroll",function(event){
             const maxScrollLeft = container.scrollWidth - container.clientWidth;
-            console.log({scrollLeft:container.scrollLeft});
-            if(container.scrollLeft>1){
-                lefty.style.display="block";
-                if(container.scrollLeft>maxScrollLeft-10){
-                    righty.style.display="none"; 
+            console.log({width:window.innerWidth});
+            if( window.innerWidth>900 && window.innerWidth<1130){
+                if(container.scrollLeft>=1){
+                    console.log({scrollLeft:container.scrollLeft});
+                    lefty.style.display="block";
+                    if(container.scrollLeft>maxScrollLeft-10){
+                        righty.style.display="none"; 
+                    }else{
+                        righty.style.display="block"; 
+                    }
                 }else{
-                    righty.style.display="block"; 
+                    lefty.style.display="none";
                 }
-            }else{
-                lefty.style.display="none";
             }
             
         },false);
 
-
-
         window.addEventListener("resize", function(event){
             const maxScrollLeft = container.scrollWidth - container.clientWidth;
-            console.log({scrollLeft:container.scrollLeft});
-            if(window.width<=1130)if(container.scrollLeft=0){
-                righty.style.display="block"; 
+            console.log({width:window.innerWidth});
+            if( window.innerWidth>900 && window.innerWidth<1130){
+                console.log({scrollLeft:'rayos'});
+                console.log({scrollLeft:container.scrollLeft});
+                if(container.scrollLeft>=1){
+                    lefty.style.display="block";
+                    if(container.scrollLeft>maxScrollLeft-10){
+                        righty.style.display="none"; 
+                    }else{
+                        righty.style.display="block"; 
+                    }
+                }else{
+                    righty.style.display="block"; 
+                    lefty.style.display="none";
+                }
+            }else{
+                righty.style.display="none"; 
+                lefty.style.display="none";
             }
         });
 
+        window.addEventListener("orientationchange",function(event){
+            if(window.screen.height/window.screen.width>=4/3 && window.screen.width<900 || window.screen.width>1130){
+                lefty.style.display="none";
+                righty.style.display="none";    
+            }else if(window.screen.width<1130 && window.screen.width>900){
+                righty.style.display="block";
+            } 
+        });
         
     </script>
 

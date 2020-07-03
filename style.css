@@ -2,10 +2,12 @@ body{
     background-image: url('FOND2.png');
     background-size: cover;
     background-repeat: repeat-y;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container{
     background: linear-gradient(to bottom, #a8a8a82d calc(160px + 25vw), transparent 25%);
+    overflow: hidden;
 }
 
 .header{
@@ -528,6 +530,13 @@ body{
     color: rgb(230, 230, 230);
     transition: color .1s ease-in;
 }
+
+.product-card .like:active{
+    color:rgb(0, 231, 79);
+    background-color: white;
+}
+
+
 .product-card .product-img{
     width:115px;
     height: 115px;
@@ -748,13 +757,16 @@ footer .info{
         
     }
     
-    .product-bottom input{
+    .product-bottom button{
         font-size:14px;
         padding:5px 30px 5px 25px;
     }
 }
 
 @media (max-width: 900px){
+    .arrow{
+        display:none;
+    }
     footer{
         grid-template-columns: 1fr;
     }
@@ -828,6 +840,11 @@ footer .info{
         grid-column: 2;
         justify-content: center;
     }
+
+    .categories{
+        grid-template-columns: 0% 100% 0%;
+    }
+
 }
 
 
@@ -855,10 +872,6 @@ footer .info{
 
     .card {
         width: 80px;
-    }
-
-    .categories{
-        grid-template-columns: 0% 100% 0%;
     }
 
     .arrow{
