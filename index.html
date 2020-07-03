@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TuBotica</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="icon" href="tubotica-icon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="tubotica-icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -17,7 +18,7 @@
             <head>
                 <div class="logo">
                     <img src="isotipo.png" alt="logo" width="35px" height="35px">
-                    <span>TuBotica.pe</span>
+                    <h1>TuBotica.pe</h1>
                 </div>
                 <div class="searchbar-container">
                     <div class="searchbar">
@@ -44,19 +45,24 @@
                 <div id="slider" class="slider">
                     <ul>
                         <li>
-                            <img src="Producto1.png" alt="">
+                            <img class="p-regular" src="Producto1.png" alt="">
+                            <img class="p-short" src="Producto2.png" alt="">
                         </li>
                         <li>
-                            <img src="Producto1.png" alt="">
+                            <img class="p-regular" src="Producto1.png" alt="">
+                            <img class="p-short" src="Producto2.png" alt="">
                         </li>
                         <li>
-                            <img src="Producto1.png" alt="">
+                            <img class="p-regular" src="Producto1.png" alt="">
+                            <img class="p-short" src="Producto2.png" alt="">
                         </li>
                         <li>
-                            <img src="Producto1.png" alt="">
+                            <img class="p-regular" src="Producto1.png" alt="">
+                            <img class="p-short" src="Producto2.png" alt="">
                         </li>
                         <li>
-                            <img src="Producto1.png" alt="">
+                            <img class="p-regular" src="Producto1.png" alt="">
+                            <img class="p-short" src="Producto2.png" alt="">
                         </li>
                     </ul>
                 </div> 
@@ -66,36 +72,36 @@
                 <div class="arrow left">
                     <i class="fas fa-angle-left"></i>
                 </div>
-                <div id="sc" class="scrolling-categories">
+                <div class="scrolling-categories">
                     <div class="card">
                         <img class="img1" src="Adulto Mayor.png" alt="">
                         <img class="img2" src="Adulto Mayor2.png" alt="">
-                        <h2><span>A</span>dulto Mayor</h2>
+                        <div class="card-title"><h2><span>A</span>dulto Mayor</h2></div>
                     </div>
                     <div class="card">
                         <img class="img1" src="Bebés.png" alt="">
                         <img class="img2" src="Bebés2.png" alt="">
-                        <h2><span>B</span>ebés</h2>
+                        <div class="card-title"><h2><span>B</span>ebés</h2></div>
                     </div>
                     <div class="card">
                         <img class="img1" src="Belleza.png" alt="">
                         <img class="img2" src="Belleza2.png" alt="">
-                        <h2><span>B</span>elleza</h2>
+                        <div><h2><span>B</span>elleza</h2></div>
                     </div>
                     <div class="card">
                         <img class="img1" src="Cuidado personal.png" alt="">
                         <img class="img2" src="Cuidado personal2.png" alt="">
-                        <h2><span>C</span>uidado Personal</h2>
-                    </div>
-                    <div class="card">
-                        <img class="img1" src="Descuentos.png" alt="">
-                        <img class="img2" src="Descuentos2.png" alt="">
-                        <h2><span>P</span>romociones</h2>
+                        <div><h2><span>C</span>uidado Personal</h2></div>
                     </div>
                     <div id="last" class="card">
                         <img class="img1" src="MEDICINA.png" alt="">
                         <img class="img2" src="MEDICINA2.png" alt="">
-                        <h2><span>M</span>edicina y Salud</h2>
+                        <div><h2><span>M</span>edicina y Salud</h2></div>
+                    </div>
+                    <div class="card">
+                        <img class="img1" src="Descuentos.png" alt="">
+                        <img class="img2" src="Descuentos2.png" alt="">
+                        <div><h2><span>P</span>romociones</h2></div>
                     </div>
                     <div class="ext">
                         <span></span>
@@ -106,14 +112,172 @@
                     <i class="fas fa-angle-right"></i>
                 </div>
             </div>
+
+            <aside class="banner">
+                <div class="ads">
+                    PUBLICIDAD
+                </div>
+            </aside>
+
+            <div class="subtitle">
+                <h3>PRODUCTOS DESTACADOS<span>Encuentra lo más pedido</span></h3>
+            </div> 
             
+            <div class="products">
+                <div class="product-list">
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                        <div class="product-card">
+                            <i class="fas fa-heart like"></i>
+                            <img class="product-img" src="desodorante.jpg" loading="lazy" alt="desodorante">
+                            <h4>Nombre del producto</h4>
+                            <img class = "card-divider"src="arrow.png" loading="lazy" alt="">
+                            <span class='product-category'>Categoría</span>
+                            <span class='product-bottom'>
+                                <span>S/.0,00</span>
+                                <button class="ripple-button">Comprar</button>
+                            </span>
+                        </div>
+
+                </div>
+            </div>    
         </div>
+
+        <footer>
+                <ul>
+                    <li class="footer-button">
+                        <img src="BOTON1.png" alt="boton nosotros">
+                        <span>Nosotros</span>
+                    </li>
+                    
+                    <li class="footer-button">
+                        <img src="BOTON2.png" alt="boton tu blog">
+                        <span>TuBlog</span>
+                    </li>
+                    
+                    <li class="footer-button">
+                        <img src="BOTON3.png" alt="boton contactanos">
+                        <span>Contáctanos</span>
+                    </li>
+                    
+                    <li class="footer-button">
+                        <img src="BOTON4.png" alt="boton zonas reparto">
+                        <span>Zonas de reparto</span>
+                    </li>
+                    
+                    <li class="footer-button">
+                        <img src="BOTON5.png" alt="boton politica y condiciones">
+                        <span>Política y Condiciones</span>
+                    </li>
+
+                </ul>
+                <div class="info">
+                    <div class="social">
+                        <span>Síguenos</span>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <p class="c-book"><i class="fas fa-book"></i><span>Libro de reclamaciones</span></p>
+                    <div class="payment">
+                        <span>Medios de pago</span>
+                        <img src="VISA.png" alt="visa">
+                        <img src="MC.png" alt="mastercard">
+                        <img src="PAYPAl.png" alt="paypal">
+                    </div>
+                </div>
+        </footer>
     </div>
 
     <script>
         const container = document.querySelector(".scrolling-categories");
 
         const lefty = document.querySelector(".left");
+        const righty = document.querySelector(".right");
+        const likeButtons = document.getElementsByClassName("like");
+
         const translate = 180;
         let leftSpace = 0;
 
@@ -123,28 +287,52 @@
             container.scrollLeft-=translate;
         });
 
-        const righty = document.querySelector(".right");
+        
         righty.addEventListener("click", function() {
             container.scrollLeft-=1;
             container.scrollLeft+=1;
             container.scrollLeft+=translate;
         });
 
+        [...likeButtons].forEach(b => {
+            console.log('button');
+            b.addEventListener("click", function(){
+                if(b.style.color!="rgb(0, 231, 79)"){
+                    console.log(b.style.color);
+                    b.style.color="#00E74F";
+                }else{
+                    console.log(b.style.color);
+                    b.style.color="#E6E6E6";
+                }
+            });
+        });
+
+
         container.addEventListener("scroll",function(event){
             const maxScrollLeft = container.scrollWidth - container.clientWidth;
             console.log({scrollLeft:container.scrollLeft});
             if(container.scrollLeft>1){
-                lefty.style.visibility="visible";
+                lefty.style.display="block";
                 if(container.scrollLeft>maxScrollLeft-10){
-                    righty.style.visibility="hidden"; 
+                    righty.style.display="none"; 
                 }else{
-                    righty.style.visibility="visible"; 
+                    righty.style.display="block"; 
                 }
             }else{
-                lefty.style.visibility="hidden";
+                lefty.style.display="none";
             }
             
         },false);
+
+
+
+        window.addEventListener("resize", function(event){
+            const maxScrollLeft = container.scrollWidth - container.clientWidth;
+            console.log({scrollLeft:container.scrollLeft});
+            if(window.width<=1130)if(container.scrollLeft=0){
+                righty.style.display="block"; 
+            }
+        });
 
         
     </script>
